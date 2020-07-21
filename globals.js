@@ -1,12 +1,12 @@
 export default {
   waitForConditionTimeout: 20000,
 
-  live: {
-    env: 'live',
+  production: {
+    env: 'production',
     appURL: 'demoqa.com',
   },
-  uat: {
-    env: 'uat',
+  staging: {
+    env: 'staging',
     appURL: 'demoqa.com',
   },
 };

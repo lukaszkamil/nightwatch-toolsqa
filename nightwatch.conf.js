@@ -22,7 +22,7 @@ const config = {
     port: 4444,
   },
   test_settings: {
-    live: {
+    production: {
       webdriver: {
         server_path: 'node_modules/.bin/chromedriver',
         port: 9515,
@@ -47,7 +47,7 @@ const config = {
         },
       },
     },
-    uat: {
+    staging: {
       webdriver: {
         server_path: 'node_modules/.bin/chromedriver',
         port: 9515,

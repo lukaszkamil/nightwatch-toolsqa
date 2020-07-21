@@ -4,7 +4,17 @@ const homePage = {
       .waitForElementPresent('@homeCategoryCardsView');
     return this;
   },
+  chooseCategoryCard(categoryName) {
+    const singleCategoryCardTextView = `${this.elements.singleCategoryCard.selector}//*[normalize-space()="${categoryName}"]`;
 
+    this
+      .useXpath()
+      .waitForElementPresent(singleCategoryCardTextView)
+      .click(singleCategoryCardTextView, () => {
+        console.log(`${categoryName} category card been clicked`);
+      })
+      .useCss();
+  },
 };
 
 export default {
@@ -15,6 +25,10 @@ export default {
   elements: {
     homeCategoryCardsView: {
       selector: '.home-content .category-cards',
+    },
+    singleCategoryCard: {
+      selector: '//*[@class="card-body"]',
+      locateStrategy: 'xpath',
     },
   },
 };

@@ -19,6 +19,9 @@
         "no-multiple-empty-lines": ["error", { "max": 1 }],
         "max-len": ["warn", {"code": 150}],
         "no-param-reassign": ["off"],
-        "no-console": ["off"]
+        "no-console": ["off"],
+        "import/prefer-default-export": ["off"],
+        "import/extensions": ["off"],
+        "import/no-unresolved": ["off"]
     }
 }
