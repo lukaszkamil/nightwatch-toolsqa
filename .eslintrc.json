@@ -15,13 +15,41 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "quotes": ["error", "single"],
-        "no-multiple-empty-lines": ["error", { "max": 1 }],
-        "max-len": ["warn", {"code": 150}],
-        "no-param-reassign": ["off"],
-        "no-console": ["off"],
-        "import/prefer-default-export": ["off"],
-        "import/extensions": ["off"],
-        "import/no-unresolved": ["off"]
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 150
+            }
+        ],
+        "no-param-reassign": [
+            "off"
+        ],
+        "no-console": [
+            "off"
+        ],
+        "import/prefer-default-export": [
+            "off"
+        ],
+        "import/extensions": [
+            "off"
+        ],
+        "import/no-unresolved": [
+            "off"
+        ],
+        "eqeqeq": "off",
+        "curly": [
+            "error",
+            "all"
+        ]
     }
 }

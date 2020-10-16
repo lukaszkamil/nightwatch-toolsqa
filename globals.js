@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   waitForConditionTimeout: 20000,
 
   production: {

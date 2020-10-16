@@ -17,7 +17,7 @@ const homePage = {
   },
 };
 
-export default {
+module.exports = {
   url() {
     return `https://${this.api.globals.appURL}`;
   },

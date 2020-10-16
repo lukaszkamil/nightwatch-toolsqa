@@ -1,38 +1,23 @@
-/* eslint import/no-dynamic-require: 0,  global-require: 0 */
+const chromedriver = require('chromedriver');
 
-require('babel-register');
-
-function testConfigLocation() {
-  const id = process.argv.findIndex((arg) => arg === '--cconfig');
-  if (id > -1) {
-    return id + 1;
-  }
-  return undefined;
-}
-
-const config = {
+module.exports = {
   src_folders: ['tests'],
   custom_commands_path: 'commands',
   custom_assertions_path: 'assertions',
   page_objects_path: 'pages',
   globals_path: 'globals.js',
   webdriver: {
-    start_process: false,
-    host: 'localhost',
-    port: 4444,
+    server_path: chromedriver.path,
+    port: 9515,
+    start_process: true,
+    default_path_prefix: '',
+    cli_args: [
+      '--verbose',
+      '--whitelisted-ips 0.0.0.0/0',
+    ],
   },
   test_settings: {
     production: {
-      webdriver: {
-        server_path: 'node_modules/.bin/chromedriver',
-        port: 9515,
-        start_process: true,
-        default_path_prefix: '',
-        cli_args: [
-          '--verbose',
-          '--whitelisted-ips 0.0.0.0/0',
-        ],
-      },
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
@@ -48,15 +33,6 @@ const config = {
       },
     },
     staging: {
-      webdriver: {
-        server_path: 'node_modules/.bin/chromedriver',
-        port: 9515,
-        start_process: true,
-        default_path_prefix: '',
-        cli_args: [
-          '--verbose',
-        ],
-      },
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
@@ -73,10 +49,3 @@ const config = {
     },
   },
 };
-
-if (testConfigLocation() !== undefined) {
-  const conff = require(process.argv[testConfigLocation()]);
-  module.exports = conff;
-} else {
-  module.exports = config;
-}

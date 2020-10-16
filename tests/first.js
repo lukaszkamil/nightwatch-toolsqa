@@ -1,4 +1,4 @@
-import { constantsHome } from '~/constants';
+const constants = require('../constants');
 
 module.exports = {
   demoTest(client) {
@@ -7,7 +7,7 @@ module.exports = {
     homePage
       .navigate()
       .waitForHomePage()
-      .chooseCategoryCard(constantsHome.categoryCards.forms);
+      .chooseCategoryCard(constants.home.categoryCards.forms);
   },
 
 };

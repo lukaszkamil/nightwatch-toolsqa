@@ -10,19 +10,11 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "assertion-error": "^1.1.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "chai-nightwatch": "^0.4.0",
-    "chromedriver": "^83.0.0",
-    "geckodriver": "^1.19.1",
-    "nightwatch": "1.3.6"
+    "chromedriver": "latest",
+    "geckodriver": "latest",
+    "nightwatch": "1.4.3"
   },
   "devDependencies": {
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-root-import": "^6.5.0",
-    "babel-preset-es2015": "^6.24.1",
-    "chai": "^4.1.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
@@ -33,27 +25,6 @@
     "*.js": [
       "eslint"
     ]
-  },
-  "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "browser": false,
-      "node": true
-    },
-    "rules": {
-      "eqeqeq": "off",
-      "curly": [
-        "error",
-        "all"
-      ],
-      "quotes": [
-        "error",
-        "single"
-      ]
-    }
-  },
-  "engines": {
-    "node": ">= 8.0.0"
   },
   "pre-commit": [
     "lint-staged"

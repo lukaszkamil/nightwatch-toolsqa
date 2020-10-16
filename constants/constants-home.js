@@ -1,4 +1,4 @@
-export const constantsHome = {
+const constantsHome = {
   categoryCards: {
     elements: 'Elements',
     forms: 'Forms',
@@ -8,3 +8,5 @@ export const constantsHome = {
     bookStoreApplication: 'Book Store Application',
   },
 };
+
+module.exports = constantsHome;

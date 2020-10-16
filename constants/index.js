@@ -1,2 +1,6 @@
-export { constantsGlobal } from './constants-global';
-export { constantsHome } from './constants-home';
+/* eslint global-require: 0 */
+
+module.exports = {
+  global: require('./constants-global'),
+  home: require('./constants-home'),
+};

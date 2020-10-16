@@ -1,3 +1,5 @@
-export const constantsGlobal = {
+const constantsGlobal = {
 
 };
+
+module.exports = constantsGlobal;
