@@ -1,6 +1,7 @@
 *.log
 node_modules/
-tests_output/*
+tests_output/
 *.dev
 .idea/
 .vscode
+results/
